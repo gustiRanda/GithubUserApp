@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/detail_username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:fontFamily="sans-serif"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/detail_avatar"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/detail_username"/>
+
+    <TextView
+        android:id="@+id/detail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/detail_avatar"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="5dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_detail_followers"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_below="@id/detail_name"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/followers"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/detail_followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_gravity="center"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_detail_repository"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_below="@id/detail_name"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/repository"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/detail_repository"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_gravity="center"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_detail_following"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_below="@id/detail_name"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/following"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/detail_following"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_gravity="center"/>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/detail_company_logo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_company"
+        android:layout_below="@id/cv_detail_repository"
+        android:layout_marginTop="10dp"
+        android:contentDescription="user company" />
+
+    <TextView
+        android:id="@+id/detail_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cv_detail_repository"
+        android:layout_toEndOf="@id/detail_company_logo"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:textSize="30sp"/>
+
+    <ImageView
+        android:id="@+id/detail_location_logo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_location"
+        android:layout_below="@id/detail_company"
+        android:layout_marginTop="10dp"
+        android:contentDescription="user address"/>
+
+    <TextView
+        android:id="@+id/detail_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detail_company"
+        android:layout_toEndOf="@id/detail_location_logo"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:textSize="30sp"/>
+</RelativeLayout>
